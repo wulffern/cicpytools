@@ -42,6 +42,16 @@ def tf2tech(ctx,tf,out):
     ct.tf2tech(tf,out)
     pass
 
+
+@cli.command()
+@click.pass_context
+@click.option("--out",default="-",help="testpattern")
+def pattern(ctx,out):
+    ct.tf2tech(out)
+    pass
+
+
+
 if __name__ == '__main__':
     cli(obj={})
 
